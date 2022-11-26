@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import ReviewsDisplay from "./ReviewsDisplay"
 const reviewsData = "http://localhost:3000/reviews"
 
 function App() {
@@ -11,9 +12,12 @@ useEffect(() => {
             setAllReviews(reviews)
         })
 }, [])
+
+
 console.log("allReviews", allReviews)
   return (
     <div>
+      <ReviewsDisplay allReviews={allReviews}/>
     </div>
     // <div className="App">
     //   <header className="App-header">
