@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import ReviewsDisplay from "./ReviewsDisplay"
 import Search from "./Search"
+import Filter from "./Filter"
 const reviewsData = "http://localhost:3000/reviews"
 
 function App() {

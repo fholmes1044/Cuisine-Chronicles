@@ -9,13 +9,28 @@ function handleSubmit(e){
     console.log("Sv", searchValue)
 
     const findResult = allReviews.filter((result) =>{
-        return result.restaurant === searchValue
+        return result.restaurant.toLowerCase() === searchValue.toLowerCase()
     })
 
     setAllReviews(findResult)
     console.log("fr", findResult)
 }
+
+const [selectedCategory, setSelectedCategory] = useState("Select An Option")
+
+function handleCategoryChange (e){
+setSelectedCategory(e.target.value)
+
+const filterResults = allReviews.filter((review) =>{
+    return review.category.toLowerCase() === e.target.value.toLowerCase()
+})
+
+
+//console.log("results", filterResults)
+}
+
     return(
+      <div>
         <form className="searchbar" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -28,6 +43,18 @@ function handleSubmit(e){
         />
         <button type="submit">🔍</button>
       </form>
+
+      <label>
+        <strong>Select Food Category:</strong>
+        <select onChange={handleCategoryChange}>
+          <option value="Options" >Select An Option</option>
+          <option value="breakfast" >breakfast</option>
+          <option value="lunch" >lunch</option>
+          <option value="dinner" >dinner</option>
+        </select>
+      </label>
+      
+      </div>
     )
 }
 
