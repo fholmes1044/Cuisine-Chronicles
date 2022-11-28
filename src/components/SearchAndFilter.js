@@ -1,33 +1,17 @@
 import React, {useState} from "react";
 
-function Search({allReviews, setAllReviews}){
+function SearchAndFilter({allReviews, setAllReviews, setSearchDisplay, setCategoryResults}){
 const [searchValue, setSearchValue] = useState("")
-//console.log("sv", searchValue)
+const [selectedCategory, setSelectedCategory] = useState("Select An Option")
+
 
 function handleSubmit(e){
     e.preventDefault()
-    console.log("Sv", searchValue)
-
-    const findResult = allReviews.filter((result) =>{
-        return result.restaurant.toLowerCase() === searchValue.toLowerCase()
-    })
-
-    setAllReviews(findResult)
-    console.log("fr", findResult)
+   // console.log("Sv", searchValue)
+    setSearchDisplay(searchValue)
+    
 }
 
-const [selectedCategory, setSelectedCategory] = useState("Select An Option")
-
-function handleCategoryChange (e){
-setSelectedCategory(e.target.value)
-
-const filterResults = allReviews.filter((review) =>{
-    return review.category.toLowerCase() === e.target.value.toLowerCase()
-})
-
-
-//console.log("results", filterResults)
-}
 
     return(
       <div>
@@ -46,7 +30,10 @@ const filterResults = allReviews.filter((review) =>{
 
       <label>
         <strong>Select Food Category:</strong>
-        <select onChange={handleCategoryChange}>
+        <select onChange={(e) => {
+            setSelectedCategory(e.target.value)
+            setCategoryResults(selectedCategory)
+        }}>
           <option value="Options" >Select An Option</option>
           <option value="breakfast" >breakfast</option>
           <option value="lunch" >lunch</option>
@@ -58,4 +45,4 @@ const filterResults = allReviews.filter((review) =>{
     )
 }
 
-export default Search
+export default SearchAndFilter

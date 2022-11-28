@@ -2,8 +2,8 @@ import React from "react";
 import ReviewTile from "./ReviewTile";
 
 
-function ReviewsDisplay({allReviews}){
-const reviewsMap = allReviews.map((review) =>(
+function ReviewsDisplay({allSearchReviews}){
+const reviewsMap = allSearchReviews.map((review) =>(
 <ReviewTile key={review.restaurant} review={review}/>
 ))
 

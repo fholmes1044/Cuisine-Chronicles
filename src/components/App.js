@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from "react"
 import ReviewsDisplay from "./ReviewsDisplay"
-import Search from "./Search"
-import Filter from "./Filter"
+import SearchAndFilter from "./SearchAndFilter"
 const reviewsData = "http://localhost:3000/reviews"
 
 function App() {
   const [allReviews, setAllReviews] = useState([])
+  const [searchDisplay, setSearchDisplay] = useState("")
+  const [categoryResults, setCategoryResults] = useState("Select An Option")
 
 useEffect(() => {
     fetch(reviewsData)
@@ -15,12 +16,22 @@ useEffect(() => {
         })
 }, [])
 
+const findSearchResults = allReviews.filter((result) =>{
+  if(searchDisplay === "") return true 
+  else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
+})
 
-//console.log("allReviews", allReviews)
+const filterCategoryResults = allReviews.filter((review) =>{
+  if(categoryResults === "Select An Option") return true
+  else if (review.category.toLowerCase() === categoryResults.toLowerCase()) return review
+})
+
+console.log("categoryresultsfilter", filterCategoryResults)
+
   return (
     <div>
-      <Search allReviews={allReviews} setAllReviews={setAllReviews}/>
-      <ReviewsDisplay allReviews={allReviews}/>
+      <SearchAndFilter allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
+      <ReviewsDisplay allSearchReviews={findSearchResults}/>
     </div>
     // <div className="App">
     //   <header className="App-header">
