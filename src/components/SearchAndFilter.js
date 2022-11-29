@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function SearchAndFilter({allReviews, setAllReviews, setSearchDisplay, setCategoryResults}){
+function SearchAndFilter({allReviews, setAllReviews, setSearchDisplay, setCategoryResults, handleUpdateCategory}){
 const [searchValue, setSearchValue] = useState("")
 const [selectedCategory, setSelectedCategory] = useState("Select An Option")
 
@@ -31,8 +31,8 @@ function handleSubmit(e){
       <label>
         <strong>Select Food Category:</strong>
         <select onChange={(e) => {
-            setSelectedCategory(e.target.value)
-            setCategoryResults(selectedCategory)
+            handleUpdateCategory(e.target.value)
+            //setCategoryResults(selectedCategory)
         }}>
           <option value="Options" >Select An Option</option>
           <option value="breakfast" >breakfast</option>
