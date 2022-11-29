@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react"
 import ReviewsDisplay from "./ReviewsDisplay"
 import SearchAndFilter from "./SearchAndFilter"
+import NewReviewForm from "./NewReviewForm"
 const reviewsData = "http://localhost:3000/reviews"
+
 
 function App() {
   const [allReviews, setAllReviews] = useState([])
@@ -16,7 +18,7 @@ useEffect(() => {
         })
 }, [])
 
-const findSearchResults = allReviews.filter((result) =>{
+const findSearchResults = allReviews.filter((result) => {
   if(searchDisplay === "") return true 
   else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
 })
@@ -26,11 +28,12 @@ const filterCategoryResults = allReviews.filter((review) =>{
   else if (review.category.toLowerCase() === categoryResults.toLowerCase()) return review
 })
 
-console.log("categoryresultsfilter", filterCategoryResults)
+console.log("categoryResultsFilter", filterCategoryResults)
 
   return (
     <div>
       <SearchAndFilter allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
+      <NewReviewForm />
       <ReviewsDisplay allSearchReviews={findSearchResults}/>
     </div>
     // <div className="App">
