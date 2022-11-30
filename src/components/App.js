@@ -18,28 +18,27 @@ useEffect(() => {
         })
 }, [])
 
-const findSearchResults = allReviews.filter((result) => {
+
+const allFilterResults = allReviews
+.filter((result) => {
   if(searchDisplay === "") return true 
   else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
 })
-
-
-const filterCategoryResults = allReviews.filter((review) =>{
-  if(categoryResults === "Select An Option") return true
-  else if (review.category.toLowerCase() === categoryResults.toLowerCase()) return review
+.filter((result) =>{
+  if(categoryResults === "Options") return true
+  else if (result.category.toLowerCase() === categoryResults.toLowerCase()) return result
 })
 
 function handleUpdateCategory(newCategory){
  setCategoryResults(newCategory)
 }
-// console.log("results", categoryResults)
-// console.log("categoryResultsFilter", filterCategoryResults)
+
 
   return (
     <div>
       <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
       <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
-      <ReviewsDisplay allSearchReviews={findSearchResults}/>
+      <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
     </div>
     // <div className="App">
     //   <header className="App-header">
