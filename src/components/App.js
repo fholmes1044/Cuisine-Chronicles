@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react"
+import { Switch, Route } from "react-router-dom";
 import ReviewsDisplay from "./ReviewsDisplay"
 import SearchAndFilter from "./SearchAndFilter"
 import NewReviewForm from "./NewReviewForm"
+import FavoriteRestaurants from "./FavoriteRestaurants";
+import Home from "./Home"
+import NavBar from "./NavBar";
 const reviewsData = "http://localhost:3000/reviews"
 
 
@@ -36,26 +40,28 @@ function handleUpdateCategory(newCategory){
 
   return (
     <div>
-      <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
-      <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
-      <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
+      <NavBar />
+      <Switch>
+
+        <Route exact path= "/NewReviewForm">
+          <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
+        </Route>
+        <Route exact path = "/SearchAndFilter">
+          <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>  
+        </Route>  
+        <Route exact path ="/ReviewsDisplay">
+          <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
+        </Route>
+        <Route exact path = "/FavoriteRestaurants">
+          <FavoriteRestaurants />
+        </Route>
+        <Route exact path ="/">
+          <Home />
+        </Route>
+      
+    </Switch>  
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    //</div>
+
   );
 }
 
