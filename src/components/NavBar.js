@@ -32,7 +32,7 @@ function NavBar() {
           background: "darkblue",
         }}
       >
-        Find a Review
+        Find a Restaurant
       </NavLink>
       <NavLink
         to="/ReviewsDisplay"

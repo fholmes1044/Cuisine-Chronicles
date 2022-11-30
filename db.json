@@ -7,7 +7,7 @@
       "category": "dinner",
       "feedback": "Delicious food and decor!",
       "image": "https://i.imgur.com/GEQiAlR.jpg",
-      "recommend": false
+      "recommend": true
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "category": "breakfast",
       "feedback": "Perfect all day breakfast spot",
       "image": "https://i.imgur.com/6GQwRMW.jpg",
-      "recommend": false
+      "recommend": true
     },
     {
       "id": 3,
