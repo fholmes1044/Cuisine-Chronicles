@@ -16,7 +16,7 @@ function addRestaurantToFavorites(review){
     const findFavValue = allReviews.find((restaurant) => restaurant.id === review.id)
     //console.log("VALUE", findFavValue)
     setfavoriteRestaurants([...favoriteRestaurants, findFavValue])
-console.log("FAVORITES", favoriteRestaurants)
+    console.log("FAVORITES", favoriteRestaurants)
 
 }
 function handleDeletedReview(deletedReview){
@@ -40,7 +40,7 @@ function handleUpdatedReview(updatedReview){
             
             <h1> All Reviews</h1>
             {reviewsMap}
-             <FavoriteRestaurants favoriteRestaurants={favoriteRestaurant} /> 
+             <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants} /> 
         </div>
     )
 }

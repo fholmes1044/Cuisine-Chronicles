@@ -1,14 +1,17 @@
 import React from "react";
 import ReviewTile from "./ReviewTile";
 
-function FavoriteRestaurants({favoriteRestaurant, addRestaurantToFavorites}){
-// const mapRestaurants = favoriteRestaurant.map((restaurant) =>(
-//     <ReviewTile key ={restaurant.id} restaurant={restaurant} addRestaurantToFavorites={addRestaurantToFavorites}/>
-// ))
+function FavoriteRestaurants({favoriteRestaurants}){
+    console.log("FAVS", favoriteRestaurants)
+const mapRestaurants = favoriteRestaurants.map((review) =>(
+    <ReviewTile key ={review.id} review={review} />
+))
+console.log("MAP", mapRestaurants)
     return(
         <div>
         
 These are great!
+
         </div>
     )
   
