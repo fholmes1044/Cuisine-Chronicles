@@ -24,16 +24,7 @@ function NavBar() {
       >
         Home
       </NavLink>
-      <NavLink
-        to="/SearchAndFilter"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
-      >
-        Find a Restaurant
-      </NavLink>
+     
       <NavLink
         to="/ReviewsDisplay"
         exact

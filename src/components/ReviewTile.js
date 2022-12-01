@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
     const {restaurant, address, category, feedback, image, id, recommend} = review
-    const [recommendStatus, setRecommendStatus] = useState(true)
+    const [recommendStatus, setRecommendStatus] = useState(recommend)
 
    // console.log("rec", recommend)
     // function handleFavoritesClick (){
@@ -19,6 +19,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     }
     
     function handleRecommendClick(){
+        //const newStatus = !recommend
         setRecommendStatus((recommendStatus) => !recommendStatus)
         fetch(`http://localhost:3000/reviews/${id}`,{
             method: "PATCH",
@@ -26,7 +27,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
                 "Content-Type": "application/json",
               },
             body: JSON.stringify({
-                recommend: !recommend,
+                recommend: !recommendStatus,
               }),
         })
         .then((data) => data.json())

@@ -22,6 +22,8 @@ useEffect(() => {
         })
 }, [])
 
+console.log("CategoryRESULTS", categoryResults)
+console.log("searchResults", searchDisplay)
 
 const allFilterResults = allReviews
 .filter((result) => {
@@ -29,7 +31,7 @@ const allFilterResults = allReviews
   else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
 })
 .filter((result) =>{
-  if(categoryResults === "Options") return true
+  if(categoryResults === "Select An Option") return true
   else if (result.category.toLowerCase() === categoryResults.toLowerCase()) return result
 })
 
@@ -46,16 +48,18 @@ function handleUpdateCategory(newCategory){
         <Route exact path= "/NewReviewForm">
           <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
-        <Route exact path = "/SearchAndFilter">
-          <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>  
-        </Route>  
+        {/* <Route exact path = "/SearchAndFilter">
+           
+        </Route>   */}
         <Route exact path ="/ReviewsDisplay">
+        <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
           <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
         <Route exact path = "/FavoriteRestaurants">
           <FavoriteRestaurants />
         </Route>
         <Route exact path ="/">
+          <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/> 
           <Home />
         </Route>
       
