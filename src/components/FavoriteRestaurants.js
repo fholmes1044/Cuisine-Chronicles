@@ -11,7 +11,7 @@ console.log("MAP", mapRestaurants)
         <div>
         
 These are great!
-
+{mapRestaurants}
         </div>
     )
   

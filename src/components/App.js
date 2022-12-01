@@ -49,13 +49,11 @@ function handleUpdateCategory(newCategory){
           <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
       
-        <Route exact path ="/ReviewsDisplay">
+        <Route path ="/ReviewsDisplay">
         <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
           <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
-        <Route exact path = "/FavoriteRestaurants">
-          <FavoriteRestaurants />
-        </Route>
+        
         <Route exact path ="/">
           <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/> 
           <Home />

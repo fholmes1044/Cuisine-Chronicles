@@ -1,21 +1,23 @@
 import React, {useState} from "react";
 import FavoriteRestaurants from "./FavoriteRestaurants";
 import ReviewTile from "./ReviewTile";
+import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
 
 
 function ReviewsDisplay({allFilterResults, allReviews, setAllReviews}){
 
 const [favoriteRestaurants, setfavoriteRestaurants] = useState([])
 
+let {path, url} = useRouteMatch()
 const reviewsMap = allFilterResults.map((review) =>(
 <ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview} addRestaurantToFavorites={addRestaurantToFavorites}/>
 ))
 
 function addRestaurantToFavorites(review){
-    //console.log("CHECK",review)
-    const findFavValue = allReviews.find((restaurant) => restaurant.id === review.id)
+    console.log("CHECK",review)
+    //const findFavValue = allReviews.find((restaurant) => restaurant.id === review.id)
     //console.log("VALUE", findFavValue)
-    setfavoriteRestaurants([...favoriteRestaurants, findFavValue])
+    setfavoriteRestaurants([...favoriteRestaurants, review])
     console.log("FAVORITES", favoriteRestaurants)
 
 }
@@ -38,9 +40,16 @@ function handleUpdatedReview(updatedReview){
     return(
         <div>
             
-            <h1> All Reviews</h1>
-            {reviewsMap}
-             <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants} /> 
+         <Switch>
+            <Route exact path = {path}>
+                 <h1> All Reviews</h1>
+                {reviewsMap}
+            </Route>
+            <Route path = {`${path}/FavoriteRestaurants`}>
+                <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants}/>
+            </Route>
+        </Switch> 
+           
         </div>
     )
 }

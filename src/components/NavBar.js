@@ -46,7 +46,7 @@ function NavBar() {
         NewReviewForm
       </NavLink>
       <NavLink
-        to="/FavoriteRestaurants"
+        to="/ReviewsDisplay/FavoriteRestaurants"
         exact
         style={linkStyles}
         activeStyle={{
