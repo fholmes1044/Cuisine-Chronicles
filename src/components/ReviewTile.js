@@ -3,12 +3,13 @@ import React, {useState} from "react";
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
     const {restaurant, address, category, feedback, image, id, recommend} = review
     const [recommendStatus, setRecommendStatus] = useState(recommend)
+    const [favoriteRestaurants, setfavoriteRestaurants] = ([])
 
-   // console.log("rec", recommend)
-    // function handleFavoritesClick (){
-    //     addRestaurantToFavorites(review)
-    //      console.log("Favorite", review)
-    // }
+   
+    function handleFavoritesClick (){
+      addRestaurantToFavorites(review)
+       // console.log("Favorite", review)
+    }
 
     function handleDeleteClick(){
         fetch(`http://localhost:3000/reviews/${id}`,{
@@ -43,7 +44,8 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
             <button className="delete-btn" onClick={handleDeleteClick}> Remove Review</button>
             <br/>
             <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? "Recommend" : "Do Not Recommend"}</button>
-
+            <br/>
+            <button className="favorites-btn" onClick={handleFavoritesClick}> Add to Favorites </button>
         </div>
     )
 }

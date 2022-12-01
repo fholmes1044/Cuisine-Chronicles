@@ -1,25 +1,24 @@
 import React, {useState} from "react";
-//import FavoriteRestaurants from "./FavoriteRestaurants";
+import FavoriteRestaurants from "./FavoriteRestaurants";
 import ReviewTile from "./ReviewTile";
 
 
 function ReviewsDisplay({allFilterResults, allReviews, setAllReviews}){
 
-const [favoriteRestaurant, setfavoriteRestaurant] = useState([])
+const [favoriteRestaurants, setfavoriteRestaurants] = useState([])
 
 const reviewsMap = allFilterResults.map((review) =>(
-<ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview}/>
+<ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview} addRestaurantToFavorites={addRestaurantToFavorites}/>
 ))
 
-// function addRestaurantToFavorites(){
-//     console.log("CHECK")
-// //     const findValue = allReviews.find((restaurant) => restaurant.id === review.id)
-// // console.log("VALUE", findValue)
-//     // if(!findValue){
-//     //     setfavoriteRestaurant([...favoriteRestaurant, e])
-// //}
+function addRestaurantToFavorites(review){
+    //console.log("CHECK",review)
+    const findFavValue = allReviews.find((restaurant) => restaurant.id === review.id)
+    //console.log("VALUE", findFavValue)
+    setfavoriteRestaurants([...favoriteRestaurants, findFavValue])
+console.log("FAVORITES", favoriteRestaurants)
 
-// }
+}
 function handleDeletedReview(deletedReview){
     const updatedReviews = allReviews.filter((review) => review.id !== deletedReview.id);
     setAllReviews(updatedReviews);
@@ -41,7 +40,7 @@ function handleUpdatedReview(updatedReview){
             
             <h1> All Reviews</h1>
             {reviewsMap}
-            {/* <FavoriteRestaurants favoriteRestaurant={favoriteRestaurant} addRestaurantToFavorites={addRestaurantToFavorites}/> */}
+             <FavoriteRestaurants favoriteRestaurants={favoriteRestaurant} /> 
         </div>
     )
 }
