@@ -16,10 +16,9 @@ function handleReviewInput(e){
     })
 }
 
-function handleSubmit(e){
-  console.log(reviewsData)  
-e.preventDefault()
-fetch(reviewsData, {
+function handleSubmit(e){  
+  e.preventDefault()
+  fetch(reviewsData, {
     method: "POST",
     headers: {
      "Content-Type": "application/json"
@@ -45,7 +44,7 @@ fetch(reviewsData, {
 setAllReviews([...allReviews, newReview])
 })
 }
-//console.log("NEW", newReviewData)
+
  return(
     <div className="newReview">
     <form onSubmit={handleSubmit}>
@@ -56,10 +55,7 @@ setAllReviews([...allReviews, newReview])
         <input type="text" name= "category" placeholder="Category" onChange={handleReviewInput}/>
         <input type="text" name= "feedback" placeholder="Feedback" onChange={handleReviewInput}/>
         <input type="text" name= "image" placeholder="Image" onChange={handleReviewInput}/>
-        <input
-          type="submit"  name="submit"  value="Add New Review"  className="submit"
-        />
-        
+        <input type="submit"  name="submit"  value="Add New Review"  className="submit"/>  
     </form>
     </div>
  )

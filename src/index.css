@@ -1,5 +1,7 @@
 
-
+:root {
+  --green: rgb(39, 189, 39);
+}
 body {
   margin: 100;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -27,29 +29,7 @@ code {
   font-size: 72px;
 }
 
-.container {
-  /* background-color: rgb(175, 58, 58);
-  color: aqua;
-  display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
-  flex-wrap: wrap; */
-  
-    height:100vh;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-}
 
 
-  .card {
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
-  }
+
 
