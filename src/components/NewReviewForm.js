@@ -43,6 +43,7 @@ function handleSubmit(e){
     })
 setAllReviews([...allReviews, newReview])
 })
+alert ( "Your review has been added! View the Reviews Tab.");
 }
 
  return(

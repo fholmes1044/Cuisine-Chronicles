@@ -5,7 +5,9 @@ const [searchValue, setSearchValue] = useState("")
 
 function handleSubmit(e){
     e.preventDefault()
-    setSearchDisplay(searchValue)   
+    setSearchDisplay(searchValue)  
+    //clear the value after submit
+    alert("You can now view your review results") 
 }
 
     return(
@@ -29,7 +31,7 @@ function handleSubmit(e){
             handleUpdateCategory(e.target.value)
             
         }}>
-          <option value="Options" >Select An Option</option>
+          <option value="Select An Option" >Select An Option</option>
           <option value="breakfast" >breakfast</option>
           <option value="lunch" >lunch</option>
           <option value="dinner" >dinner</option>

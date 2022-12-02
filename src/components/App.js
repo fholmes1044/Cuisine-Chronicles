@@ -23,11 +23,15 @@ useEffect(() => {
         })
 }, [])
 
-
+console.log(categoryResults)
 const allFilterResults = allReviews
 .filter((result) => {
-  if(searchDisplay === "") return true 
+  if(searchDisplay === "" ) return true 
   else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
+  // else if(!result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())){
+  //   return  alert ( "No Matching Results");
+  
+  // }
 })
 .filter((result) =>{
   if(categoryResults === "Select An Option") return true

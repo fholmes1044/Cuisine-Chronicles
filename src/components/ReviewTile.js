@@ -7,7 +7,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     const [recommendStatus, setRecommendStatus] = useState(recommend)
   
     function handleDeleteClick(){
-        fetch(`http://localhost:3000/reviews/${id}`,{
+        fetch(`http://localhost:3001/reviews/${id}`,{
             method: "DELETE",
         })
         .then((data) => data.json())
@@ -17,7 +17,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     function handleRecommendClick(){
         
         setRecommendStatus((recommendStatus) => !recommendStatus)
-        fetch(`http://localhost:3000/reviews/${id}`,{
+        fetch(`http://localhost:3001/reviews/${id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -32,18 +32,18 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     return(
         <div className="container" >
             <div className="card">
-            <h2 className="h2">{restaurant}</h2>
-            <h4> Address: {address}</h4>
-            <img src={image} alt={restaurant}></img>
-            <p>Category : {category}</p>
-            <p>Feedback : {feedback} </p>
-            <button className="delete-btn" onClick={handleDeleteClick}> Remove Review</button>
-            <br/>
-            <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? "Recommend" : "Do Not Recommend"}</button>
-            <br/>
-            <button className="favorites-btn" onClick={() =>{
-                addRestaurantToFavorites(review)
-            }}> Add to Favorites </button>
+                <h2 className="h2">{restaurant}</h2>
+                <h4> Address: {address}</h4>
+                <img src={image} alt={restaurant}></img>
+                <p>Category : {category}</p>
+                <p>Feedback : {feedback} </p>
+                <button className="delete-btn" onClick={handleDeleteClick}> Remove Review</button>
+                <br/>
+                <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? "Recommend" : "Do Not Recommend"}</button>
+                <br/>
+                <button className="favorites-btn" onClick={() =>{
+                    addRestaurantToFavorites(review)
+                }}> Add to Favorites </button>
            </div> 
         </div>
     )
