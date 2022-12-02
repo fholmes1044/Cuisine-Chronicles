@@ -26,7 +26,7 @@ function NavBar() {
       </NavLink>
      
       <NavLink
-        to="/ReviewsDisplay"
+        to="/reviews"
         exact
         style={linkStyles}
         activeStyle={{
@@ -36,7 +36,7 @@ function NavBar() {
         Reviews
       </NavLink>
       <NavLink
-        to="/NewReviewForm"
+        to="/reviews/new"
         exact
         style={linkStyles}
         activeStyle={{
@@ -46,7 +46,7 @@ function NavBar() {
         NewReviewForm
       </NavLink>
       <NavLink
-        to="/ReviewsDisplay/FavoriteRestaurants"
+        to="/reviews/favorite"
         exact
         style={linkStyles}
         activeStyle={{

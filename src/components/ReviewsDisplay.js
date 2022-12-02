@@ -5,9 +5,9 @@ import { Switch, Route, useRouteMatch} from "react-router-dom";
 import "../index.css"
 
 
-function ReviewsDisplay({allFilterResults, allReviews, setAllReviews}){
+function ReviewsDisplay({allFilterResults, allReviews, setAllReviews, favoriteRestaurants, setFavoriteRestaurants}){
 
-const [favoriteRestaurants, setfavoriteRestaurants] = useState([])
+
 
 let {path} = useRouteMatch()
 
@@ -16,7 +16,7 @@ const reviewsMap = allFilterResults.map((review) =>(
 ))
 
 function addRestaurantToFavorites(review){
-    setfavoriteRestaurants([...favoriteRestaurants, review])
+    setFavoriteRestaurants([...favoriteRestaurants, review])
 }
 function handleDeletedReview(deletedReview){
     const updatedReviews = allReviews.filter((review) => review.id !== deletedReview.id);

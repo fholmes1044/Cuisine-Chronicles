@@ -5,13 +5,15 @@ import SearchAndFilter from "./SearchAndFilter"
 import NewReviewForm from "./NewReviewForm"
 import Home from "./Home"
 import NavBar from "./NavBar";
-const reviewsData = "http://localhost:3000/reviews"
+import FavoriteRestaurants from "./FavoriteRestaurants";
+const reviewsData = "http://localhost:3001/reviews"
 
 
 function App() {
   const [allReviews, setAllReviews] = useState([])
   const [searchDisplay, setSearchDisplay] = useState("")
   const [categoryResults, setCategoryResults] = useState("Select An Option")
+  const [favoriteRestaurants, setFavoriteRestaurants] = useState([])
 
 useEffect(() => {
     fetch(reviewsData)
@@ -21,8 +23,6 @@ useEffect(() => {
         })
 }, [])
 
-//console.log("CategoryRESULTS", categoryResults)
-//console.log("searchResults", searchDisplay)
 
 const allFilterResults = allReviews
 .filter((result) => {
@@ -45,19 +45,25 @@ function handleUpdateCategory(newCategory){
       <NavBar />
       <Switch>
 
-        <Route exact path= "/NewReviewForm">
+        <Route exact path= "/reviews/new">
           <NewReviewForm reviewsData= {reviewsData} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
       
-        <Route path ="/ReviewsDisplay">
+        <Route exact path ="/reviews">
         <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/>
-          <ReviewsDisplay reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
+          <ReviewsDisplay setFavoriteRestaurants={setFavoriteRestaurants} favoriteRestaurants={favoriteRestaurants} reviewsData={reviewsData} allFilterResults={allFilterResults} allReviews={allReviews} setAllReviews={setAllReviews}/>
         </Route>
         
+        <Route exact path = "/reviews/favorite">
+                <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants}/>
+            </Route>
+
         <Route exact path ="/">
           <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/> 
           <Home />
         </Route>
+
+
       
     </Switch>  
     </div>
