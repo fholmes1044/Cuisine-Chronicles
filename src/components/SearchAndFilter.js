@@ -6,8 +6,8 @@ const [searchValue, setSearchValue] = useState("")
 function handleSubmit(e){
     e.preventDefault()
     setSearchDisplay(searchValue)  
-    //clear the value after submit
-    alert("You can now view your review results") 
+    setSearchValue("")
+    alert("You can now view your searched restaurant") 
 }
 
     return(
