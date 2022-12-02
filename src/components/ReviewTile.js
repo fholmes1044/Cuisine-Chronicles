@@ -1,11 +1,5 @@
 import React, {useState} from "react";
 import "../index.css"
-import "../myStyles.css"
-
-const heading = {
-    fontSize: "12px",
-    color: "pink"
-}
 
 
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
@@ -36,8 +30,9 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
         .then((updatedReview) => handleUpdatedReview(updatedReview))
     }
     return(
-        <div className="reviewtile" >
-            <h2 style={heading}>{restaurant}</h2>
+        <div className="container" >
+            <div className="card">
+            <h2 className="h2">{restaurant}</h2>
             <h4> Address: {address}</h4>
             <img src={image} alt={restaurant}></img>
             <p>Category : {category}</p>
@@ -49,6 +44,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
             <button className="favorites-btn" onClick={() =>{
                 addRestaurantToFavorites(review)
             }}> Add to Favorites </button>
+           </div> 
         </div>
     )
 }

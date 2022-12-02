@@ -1,7 +1,7 @@
 
 
 body {
-  margin: 0;
+  margin: 100;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -14,4 +14,42 @@ code {
     monospace;
 }
 
+.h2{
+  color: rgb(56, 178, 12);
+}
+
+.primary{
+  color: rgb(115, 0, 255);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.font-xl{
+  font-size: 72px;
+}
+
+.container {
+  /* background-color: rgb(175, 58, 58);
+  color: aqua;
+  display: flex;
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap; */
+  
+    height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+  .card {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+  }
 
