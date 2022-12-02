@@ -1,0 +1,13 @@
+.primary{
+    color: rgb(0, 255, 76);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.font-xl{
+    font-size: 72px;
+}
+
+.reviewtile {
+    background-color: black;
+    color: aqua;
+  }

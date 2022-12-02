@@ -1,7 +1,6 @@
 import React from "react";
 
 function FavoriteTile({review}){
-    console.log("FAVreview", review)
     const {restaurant, address, category, feedback, image} = review
     return(
         <div>

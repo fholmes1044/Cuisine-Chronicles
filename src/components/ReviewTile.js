@@ -1,10 +1,20 @@
 import React, {useState} from "react";
+import "../index.css"
+import "../myStyles.css"
 
+const heading = {
+    fontSize: "12px",
+    color: "pink"
+}
+
+const reviewtile = {
+    background: "black",
+    color: "aqua"
+  }
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
     const {restaurant, address, category, feedback, image, id, recommend} = review
     const [recommendStatus, setRecommendStatus] = useState(recommend)
   
-
     function handleDeleteClick(){
         fetch(`http://localhost:3000/reviews/${id}`,{
             method: "DELETE",
@@ -29,8 +39,8 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
         .then((updatedReview) => handleUpdatedReview(updatedReview))
     }
     return(
-        <div>
-            <h2>{restaurant}</h2>
+        <div className=".reviewtile" style={reviewtile}>
+            <h2 style={heading}>{restaurant}</h2>
             <h4> Address: {address}</h4>
             <img src={image} alt={restaurant}></img>
             <p>Category : {category}</p>

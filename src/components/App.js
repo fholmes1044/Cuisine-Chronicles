@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import ReviewsDisplay from "./ReviewsDisplay"
 import SearchAndFilter from "./SearchAndFilter"
 import NewReviewForm from "./NewReviewForm"
-import FavoriteRestaurants from "./FavoriteRestaurants";
 import Home from "./Home"
 import NavBar from "./NavBar";
 const reviewsData = "http://localhost:3000/reviews"
@@ -42,6 +41,7 @@ function handleUpdateCategory(newCategory){
 
   return (
     <div>
+    
       <NavBar />
       <Switch>
 
