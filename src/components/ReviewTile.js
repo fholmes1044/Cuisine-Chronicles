@@ -5,12 +5,6 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     const [recommendStatus, setRecommendStatus] = useState(recommend)
   
 
-   
-    // function handleFavoritesClick (){
-    //   addRestaurantToFavorites(review)
-    //    // console.log("Favorite", review)
-    // }
-
     function handleDeleteClick(){
         fetch(`http://localhost:3000/reviews/${id}`,{
             method: "DELETE",
@@ -20,7 +14,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     }
     
     function handleRecommendClick(){
-        //const newStatus = !recommend
+        
         setRecommendStatus((recommendStatus) => !recommendStatus)
         fetch(`http://localhost:3000/reviews/${id}`,{
             method: "PATCH",

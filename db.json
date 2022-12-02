@@ -1,15 +1,6 @@
 {
   "reviews": [
     {
-      "id": 1,
-      "restaurant": "Xenia Greek Couzina",
-      "address": "8850 Columbia 100 Pkwy, Columbia, MD 21045",
-      "category": "dinner",
-      "feedback": "Delicious food and decor!",
-      "image": "https://i.imgur.com/GEQiAlR.jpg",
-      "recommend": false
-    },
-    {
       "id": 2,
       "restaurant": "Eggspectation",
       "address": "2402 Brandermill Blvd, Gambrills, MD 21054",
@@ -37,13 +28,13 @@
       "recommend": true
     },
     {
-      "restaurant": "The Food Market",
-      "address": "10480 Little Patuxent Pkwy G150, Columbia, MD 21044",
-      "category": "Dessert",
-      "feedback": "Cute and unique restaurant",
-      "image": "https://i.imgur.com/Zhaitmr.jpg",
-      "id": 5,
-      "recommend": false
+      "restaurant": "Xenia Greek Kouzina",
+      "address": " 8850 Columbia 100 Pkwy, Columbia, MD 21045",
+      "category": "Dinner",
+      "feedback": "great",
+      "image": "https://i.imgur.com/GEQiAlR.jpg",
+      "recommend": true,
+      "id": 5
     }
   ]
 }

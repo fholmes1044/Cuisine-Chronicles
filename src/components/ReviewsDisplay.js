@@ -8,15 +8,14 @@ function ReviewsDisplay({allFilterResults, allReviews, setAllReviews}){
 
 const [favoriteRestaurants, setfavoriteRestaurants] = useState([])
 
-let {path, url} = useRouteMatch()
+let {path} = useRouteMatch()
 const reviewsMap = allFilterResults.map((review) =>(
 <ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview} addRestaurantToFavorites={addRestaurantToFavorites}/>
 ))
 
 function addRestaurantToFavorites(review){
     console.log("CHECK",review)
-    //const findFavValue = allReviews.find((restaurant) => restaurant.id === review.id)
-    //console.log("VALUE", findFavValue)
+    
     setfavoriteRestaurants([...favoriteRestaurants, review])
     console.log("FAVORITES", favoriteRestaurants)
 
