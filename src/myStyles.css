@@ -1,5 +1,5 @@
 .primary{
-    color: rgb(0, 255, 76);
+    color: rgb(115, 0, 255);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -8,6 +8,6 @@
 }
 
 .reviewtile {
-    background-color: black;
+    background-color: rgb(175, 58, 58);
     color: aqua;
   }
