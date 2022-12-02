@@ -23,20 +23,23 @@ useEffect(() => {
         })
 }, [])
 
-console.log(categoryResults)
-const allFilterResults = allReviews
-.filter((result) => {
-  if(searchDisplay === "" ) return true 
-  else if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) return result
-  // else if(!result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())){
-  //   return  alert ( "No Matching Results");
-  
-  // }
+
+const allFilterResults = allReviews.filter((result) => {
+  if(searchDisplay === "" && categoryResults === "Select An Option") return true 
+
+  if(result.restaurant.toLowerCase().includes(searchDisplay.toLowerCase())) {
+    if (result.category.toLowerCase().includes(categoryResults.toLowerCase()) || categoryResults==="Select An Option") 
+  {return true
+  }
+}
+  return false
 })
-.filter((result) =>{
-  if(categoryResults === "Select An Option") return true
-  else if (result.category.toLowerCase() === categoryResults.toLowerCase()) return result
-})
+
+function alert(){
+  if(allFilterResults.length > 0) {
+  console.log("ok")
+}
+}
 
 function handleUpdateCategory(newCategory){
  setCategoryResults(newCategory)
