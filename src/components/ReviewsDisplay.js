@@ -11,9 +11,11 @@ function ReviewsDisplay({allFilterResults, allReviews, setAllReviews, favoriteRe
 
 let {path} = useRouteMatch()
 
-const reviewsMap = allFilterResults.map((review) =>(
-<ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview} addRestaurantToFavorites={addRestaurantToFavorites}/>
-))
+const reviewsMap = allFilterResults.map((review) =>{
+        return(
+          <ReviewTile key={review.restaurant} review={review} handleDeletedReview={handleDeletedReview} handleUpdatedReview={handleUpdatedReview} addRestaurantToFavorites={addRestaurantToFavorites}/>  
+        ) 
+})
 
 function addRestaurantToFavorites(review){
     setFavoriteRestaurants([...favoriteRestaurants, review])

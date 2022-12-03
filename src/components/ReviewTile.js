@@ -43,6 +43,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
                 <br/>
                 <button className="favorites-btn" onClick={() =>{
                     addRestaurantToFavorites(review)
+                    alert("This restaurant is added to your favorites!")
                 }}> Add to Favorites </button>
            </div> 
         </div>
