@@ -31,22 +31,28 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     }
     return(
         <div className="container" >
+         
+          <div className="column">
             <div className="card">
                 <h2 className="h2">{restaurant}</h2>
                 <h4> Address: {address}</h4>
-                <img src={image} alt={restaurant}></img>
+                <img src={image} alt={restaurant} className="img-tile"></img>
                 <p>Category : {category}</p>
                 <p>Feedback : {feedback} </p>
                 <button className="delete-btn" onClick={handleDeleteClick}> Remove Review</button>
-                <br/>
-                <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? "Recommend" : "Do Not Recommend"}</button>
                 <br/>
                 <button className="favorites-btn" onClick={() =>{
                     addRestaurantToFavorites(review)
                     alert("This restaurant is added to your favorites!")
                 }}> Add to Favorites </button>
-           </div> 
-        </div>
+                <br />
+                <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? "Recommend" : "Do Not Recommend"}</button>
+                
+                
+           </div>
+        
+     </div>   
+    </div>
     )
 }
 

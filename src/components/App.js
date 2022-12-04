@@ -24,6 +24,7 @@ useEffect(() => {
 }, [])
 
 
+
 const allFilterResults = allReviews.filter((result) => {
   if(searchDisplay === "" && categoryResults === "Select An Option") return true 
 
@@ -35,11 +36,6 @@ const allFilterResults = allReviews.filter((result) => {
   return false
 })
 
-function alert(){
-  if(allFilterResults.length > 0) {
-  console.log("ok")
-}
-}
 
 function handleUpdateCategory(newCategory){
  setCategoryResults(newCategory)

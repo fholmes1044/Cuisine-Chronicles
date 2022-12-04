@@ -3,7 +3,7 @@
     {
       "id": 1,
       "restaurant": "Eggspectation",
-      "address": "2402 Brandermill Blvd, Gambrills, MD 21054",
+      "address": "2402 Brandermill Blvd, Gambrills, MD",
       "category": "breakfast",
       "feedback": "Perfect all day breakfast spot",
       "image": "https://i.imgur.com/6GQwRMW.jpg",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "restaurant": "Vola's Dockside",
-      "address": "101 N Union St, Alexandria, VA 22314",
+      "address": "101 N Union St, Alexandria, VA",
       "category": "lunch",
       "feedback": "Great restaurant on the waterfront!",
       "image": "https://i.imgur.com/AfuluNS.jpg",
@@ -21,33 +21,15 @@
     {
       "id": 3,
       "restaurant": "Georgia Brown's",
-      "address": "950 15th St NW, Washington, DC 20005",
+      "address": "950 15th St NW, Washington, DC",
       "category": "dessert",
       "feedback": "Beautiful , delicious, black owned restaurant",
       "image": "https://i.imgur.com/3UW2o7u.jpg",
       "recommend": true
     },
     {
-      "restaurant": "The Food Market ",
-      "address": "10480 Little Patuxent Pkwy G150, Columbia, MD 21044",
-      "category": "Dessert",
-      "feedback": "delicious dessert!",
-      "image": "https://i.imgur.com/Zhaitmr.jpg",
-      "recommend": true,
-      "id": 4
-    },
-    {
-      "restaurant": "Xenia Greek Kouzina",
-      "address": "8850 Columbia 100 Pkwy, Columbia, MD 21045",
-      "category": "Dinner",
-      "feedback": "They have the best crabcakes around. ",
-      "image": "https://i.imgur.com/GEQiAlR.jpg",
-      "recommend": true,
-      "id": 5
-    },
-    {
       "restaurant": "Carolina Kitchen ",
-      "address": "6501 America Blvd, Hyattsville, MD 20782",
+      "address": "6501 America Blvd, Hyattsville, MD ",
       "category": "Dinner",
       "feedback": "Live music and well seasoned food! ",
       "image": "https://i.imgur.com/0CyQ3rK.jpg",
@@ -56,12 +38,48 @@
     },
     {
       "restaurant": "Dlena ",
-      "address": "476 K St NW Suite D, Washington, DC 20001",
+      "address": "476 K St NW Suite D, Washington, DC",
       "category": "Dinner",
       "feedback": "The empanadas are tasty. ",
       "image": "https://i.imgur.com/DTIYgFp.jpg",
       "recommend": true,
       "id": 7
+    },
+    {
+      "restaurant": "Miss Toya's Creole House",
+      "address": " 923 Ellsworth Dr, Silver Spring, MD ",
+      "category": "Lunch",
+      "feedback": "The salad was okay. ",
+      "image": "https://i.imgur.com/aE4l7cx.jpg",
+      "recommend": true,
+      "id": 8
+    },
+    {
+      "restaurant": "Lime and Salt",
+      "address": "8395 Piney Orchard Pkwy, Odenton, MD ",
+      "category": "Dessert",
+      "feedback": "The delicious churros taste like donuts!",
+      "image": "https://i.imgur.com/eWqtWna.jpg",
+      "recommend": true,
+      "id": 9
+    },
+    {
+      "restaurant": "Iron Rooster",
+      "address": " 12 Market Space, Annapolis, MD",
+      "category": "Breakfast ",
+      "feedback": "Absolutely tasty breakfast foods. ",
+      "image": "https://i.imgur.com/taWpO4O.jpg",
+      "recommend": true,
+      "id": 10
+    },
+    {
+      "restaurant": "Xenia Greek Kouzina",
+      "address": "10480 Little Patuxent Pkwy G150, Columbia, MD 21044",
+      "category": "Dinner",
+      "feedback": "They have the best crabcakes around. ",
+      "image": "https://i.imgur.com/GEQiAlR.jpg",
+      "recommend": true,
+      "id": 11
     }
   ]
 }

@@ -40,7 +40,9 @@ function handleUpdatedReview(updatedReview){
          <Switch>
             <Route exact path = {path}>
                  <h1 className="primary"> All Reviews</h1>
+                 <div className="row">
                 {reviewsMap}
+                </div>
             </Route>
             <Route path = {`${path}/FavoriteRestaurants`}>
                 <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants}/>

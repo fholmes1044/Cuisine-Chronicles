@@ -1,7 +1,5 @@
 
-:root {
-  --green: rgb(39, 189, 39);
-}
+
 body {
   margin: 100;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +15,8 @@ code {
 }
 
 .h2{
-  color: rgb(56, 178, 12);
+  color: rgb(48, 26, 17);
+  text-align: center;
 }
 
 .primary{
@@ -30,6 +29,44 @@ code {
 }
 
 
+.card{
+  background-color: rgb(190, 183, 194);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 600px;
+  margin: auto;
+  
+}
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2);
+  opacity: 0.5;
+}
 
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
 
+.img-tile{
+  max-width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 300px;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
