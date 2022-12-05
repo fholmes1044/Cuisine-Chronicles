@@ -28,6 +28,7 @@ code {
   background-color: rgb(247, 240, 230);
  margin: 0%;
  width: 100%;
+ text-align: center;
 }
 #home-div{
 background-color: rgb(252, 232, 207);
@@ -39,6 +40,7 @@ text-align: center;
 color: rgb(42, 21, 126);
 font-size: 40px;
 margin: 0%;
+font-family: 'Courier New', Courier, monospace;
 }
 
 .h2{
@@ -111,4 +113,23 @@ border-radius: 12px;
 
 .favorites-btn{
   margin-right: 50px;
+}
+
+#newreview{
+  padding-top: 20px;
+  text-align: center;
+  background-color: blanchedalmond;
+}
+
+#new-review-img{
+  text-align: center;
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 60%;
+}
+
+#restaurant-heading{
+  color: rgb(42, 21, 126);
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
 }

@@ -12,7 +12,9 @@ function handleSubmit(e){
 
     return(
       <div>
+        
         <form className="searchbar" onSubmit={handleSubmit}>
+        <strong>Find a Restaurant: </strong>
         <input
           type="text"
           id="search"
@@ -26,7 +28,7 @@ function handleSubmit(e){
       </form>
 
       <label>
-        <strong>Select Food Category:</strong>
+        <strong>Select Food Category: </strong>
         <select onChange={(e) => {
             handleUpdateCategory(e.target.value)
             

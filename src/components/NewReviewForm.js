@@ -47,9 +47,9 @@ alert ( "Your review has been added! View the Reviews Tab.");
 }
 
  return(
-    <div className="newReview">
+    <div id="newreview">
     <form onSubmit={handleSubmit}>
-    <strong>Add a New Restaurant Review</strong>
+    <div id="restaurant-heading"><strong>Add a New Restaurant Review</strong></div>
     <br/>
         <input type="text" name = "restaurant" placeholder="Restaurant Name" onChange={handleReviewInput}/>
         <input type="text" name = "address" placeholder="Address" onChange={handleReviewInput}/>
@@ -58,6 +58,7 @@ alert ( "Your review has been added! View the Reviews Tab.");
         <input type="text" name= "image" placeholder="Image" onChange={handleReviewInput}/>
         <input type="submit"  name="submit"  value="Add New Review"  className="submit"/>  
     </form>
+    <img id = "new-review-img" src="https://i.imgur.com/Zzjpu0j.png"/>
     </div>
  )
 }
