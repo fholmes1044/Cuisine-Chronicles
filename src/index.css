@@ -7,11 +7,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#bg{
+  height: 1000%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Maybe{
+  font-size: 20px;
+}
+
+#navbar{
+  background-color: rgb(247, 240, 230);
+ margin: 0%;
+ width: 100%;
+}
+#home-div{
+background-color: rgb(252, 232, 207);
+margin: 0%;
+text-align: center;
+}
+
+#home-heading{
+color: rgb(42, 21, 126);
+font-size: 40px;
+margin: 0%;
 }
 
 .h2{

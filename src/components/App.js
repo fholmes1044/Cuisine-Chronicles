@@ -65,8 +65,6 @@ function handleUpdateCategory(newCategory){
           <SearchAndFilter handleUpdateCategory={handleUpdateCategory} allReviews={allReviews} setAllReviews={setAllReviews} setSearchDisplay={setSearchDisplay} setCategoryResults={setCategoryResults}/> 
           <Home />
         </Route>
-
-
       
     </Switch>  
     </div>
