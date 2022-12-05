@@ -39,7 +39,7 @@ function handleUpdatedReview(updatedReview){
         <div>  
          <Switch>
             <Route exact path = {path}>
-                 <h1 className="primary"> All Reviews</h1>
+                 <h1 className="all-reviews"> All Restaurant Reviews</h1>
                  <div className="row">
                 {reviewsMap}
                 </div>

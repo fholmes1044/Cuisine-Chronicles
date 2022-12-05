@@ -16,7 +16,7 @@
       "category": "lunch",
       "feedback": "Great restaurant on the waterfront!",
       "image": "https://i.imgur.com/AfuluNS.jpg",
-      "recommend": false
+      "recommend": true
     },
     {
       "id": 3,
@@ -42,7 +42,7 @@
       "category": "Dinner",
       "feedback": "The empanadas are tasty. ",
       "image": "https://i.imgur.com/DTIYgFp.jpg",
-      "recommend": true,
+      "recommend": false,
       "id": 7
     },
     {
@@ -51,7 +51,7 @@
       "category": "Lunch",
       "feedback": "The salad was okay. ",
       "image": "https://i.imgur.com/aE4l7cx.jpg",
-      "recommend": true,
+      "recommend": false,
       "id": 8
     },
     {
