@@ -40,7 +40,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
                 <p>Category : {category}</p>
                 <p>Feedback : {feedback} </p>
                 <p>Recommendation Status:    
-                <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? <strong>"Recommend" </strong>: <strong> "Do Not Recommend"</strong>}</button>
+                <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? <strong>Recommend</strong>: <strong> Do Not Recommend</strong>}</button>
                 </p>
                 <button className="favorites-btn" onClick={() =>{
                     addRestaurantToFavorites(review)

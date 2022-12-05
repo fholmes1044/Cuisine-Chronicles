@@ -65,14 +65,14 @@ font-family: 'Courier New', Courier, monospace;
   transition: 0.3s;
   max-width: 700px;
   margin: auto;
-  
+
 }
 
 .img-tile:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,2);
- 
   height: 500px;
   width: 500px;
+  
 }
 
 .container {
