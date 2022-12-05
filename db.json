@@ -16,7 +16,7 @@
       "category": "lunch",
       "feedback": "Great restaurant on the waterfront!",
       "image": "https://i.imgur.com/AfuluNS.jpg",
-      "recommend": true
+      "recommend": false
     },
     {
       "id": 3,

@@ -33,7 +33,7 @@ function handleSubmit(e){
             handleUpdateCategory(e.target.value)
             
         }}>
-          <option value="Select An Option" >Select An Option</option>
+          <option value="Select An Option" >All Restaurants</option>
           <option value="breakfast" >breakfast</option>
           <option value="lunch" >lunch</option>
           <option value="dinner" >dinner</option>
