@@ -9,8 +9,11 @@ const mapRestaurants = favoriteRestaurants.map((review) =>(
 
     return(
         <div> 
-            These are great!
+            <h1 className="all-reviews">Favorite Restaurants </h1>
+                 <div className="row">
+            
             {mapRestaurants}
+            </div>
         </div>
     )
   
