@@ -1,6 +1,6 @@
-# Food Finds Restaurant Review Application 
+# Food Restaurant Review Application 
 
-This application will allow users to leave a review and image of restaurant experiences. Users can search through their previos food experiences to find the best restaurants to revisit.
+This application will allow users to leave a review and image of restaurant experiences. Users can search through their previous food experiences to find the best restaurants to revisit.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## User Features
