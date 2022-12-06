@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import FavoriteRestaurants from "./FavoriteRestaurants";
 import ReviewTile from "./ReviewTile";
 import { Switch, Route, useRouteMatch} from "react-router-dom";
