@@ -7,6 +7,7 @@ const [newReviewData, setNewReviewData] = useState({
     category: "",
     feedback:"",
     image:"",
+    recommend: true
 })
 
 function handleReviewInput(e){
@@ -23,14 +24,7 @@ function handleSubmit(e){
     headers: {
      "Content-Type": "application/json"
   },
-  body: JSON.stringify({
-    "restaurant" :  newReviewData.restaurant,
-    "address" : newReviewData.address,
-    "category" : newReviewData.category,
-    "feedback" : newReviewData.feedback,
-    "image" : newReviewData.image,
-    "recommend": true
-  }),
+  body: JSON.stringify(newReviewData),
 })
 .then((data) => data.json())
 .then((newReview) =>{

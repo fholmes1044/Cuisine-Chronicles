@@ -1,12 +1,10 @@
 import React from "react";
-import FavoriteRestaurants from "./FavoriteRestaurants";
 import ReviewTile from "./ReviewTile";
-import { Switch, Route, useRouteMatch} from "react-router-dom";
+import { useRouteMatch} from "react-router-dom";
 import "../index.css"
 
 
 function ReviewsDisplay({allFilterResults, allReviews, setAllReviews, favoriteRestaurants, setFavoriteRestaurants}){
-
 
 
 let {path} = useRouteMatch()
@@ -37,17 +35,10 @@ function handleUpdatedReview(updatedReview){
 
     return(
         <div>  
-         <Switch>
-            <Route exact path = {path}>
                  <h1 className="all-reviews"> Restaurant Reviews</h1>
                  <div className="row">
                 {reviewsMap}
                 </div>
-            </Route>
-            <Route path = {`${path}/FavoriteRestaurants`}>
-                <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants}/>
-            </Route>
-        </Switch> 
            
         </div>
     )
