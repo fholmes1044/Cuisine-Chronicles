@@ -42,7 +42,7 @@
       "category": "Dinner",
       "feedback": "The empanadas are tasty. ",
       "image": "https://i.imgur.com/DTIYgFp.jpg",
-      "recommend": false,
+      "recommend": true,
       "id": 7
     },
     {
@@ -80,15 +80,6 @@
       "image": "https://i.imgur.com/GEQiAlR.jpg",
       "recommend": false,
       "id": 11
-    },
-    {
-      "restaurant": "Burger",
-      "address": "10480 Little Patuxent Pkwy G150, Columbia, MD 21044",
-      "category": "Dessert",
-      "feedback": "good",
-      "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/Forky_waving.png",
-      "recommend": false,
-      "id": 12
     }
   ]
 }
