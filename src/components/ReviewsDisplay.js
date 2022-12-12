@@ -1,13 +1,9 @@
 import React from "react";
 import ReviewTile from "./ReviewTile";
-//import { useRouteMatch} from "react-router-dom";
 import "../index.css"
 
 
 function ReviewsDisplay({allFilterResults, allReviews, setAllReviews, favoriteRestaurants, setFavoriteRestaurants}){
-
-
-//let {path} = useRouteMatch()
 
 const reviewsMap = allFilterResults.map((review) =>{
         return(
