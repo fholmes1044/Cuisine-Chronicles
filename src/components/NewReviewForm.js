@@ -8,7 +8,10 @@ const [newReviewData, setNewReviewData] = useState({
     feedback:"",
     image:"",
     recommend: true
-})
+});
+
+const apiUrl = 'http://localhost:3001/api/reviews'; 
+
 
 function handleReviewInput(e){
     setNewReviewData({
@@ -19,21 +22,22 @@ function handleReviewInput(e){
 
 function handleSubmit(e){  
   e.preventDefault()
-  fetch(reviewsData, {
+  fetch(apiUrl, {
     method: "POST",
     headers: {
      "Content-Type": "application/json"
   },
   body: JSON.stringify(newReviewData),
 })
-.then((data) => data.json())
+.then((resp) => resp.json())
 .then((newReview) =>{
     setNewReviewData({
         restaurant: "",
         address: "",
         category: "",
         feedback:"",
-        image:""  
+        image:"" , 
+        recommend: true
     })
 setAllReviews([...allReviews, newReview])
 })
