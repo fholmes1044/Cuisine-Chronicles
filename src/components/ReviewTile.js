@@ -1,13 +1,12 @@
 import React, {useState} from "react";
 import "../index.css"
 
-
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
     const {restaurant, address, category, feedback, image, id, recommend} = review
     const [recommendStatus, setRecommendStatus] = useState(recommend)
   
     function handleDeleteClick(){
-        fetch(`http://localhost:3001/reviews/${id}`,{
+        fetch(`http://localhost:3001/api/reviews/${id}`,{
             method: "DELETE",
         })
         .then((data) => data.json())
@@ -17,7 +16,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
     function handleRecommendClick(){
         
         setRecommendStatus((recommendStatus) => !recommendStatus)
-        fetch(`http://localhost:3001/reviews/${id}`,{
+        fetch(`http://localhost:3001/api/reviews/${id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
