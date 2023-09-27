@@ -6,6 +6,7 @@ import NewReviewForm from "./NewReviewForm";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import FavoriteRestaurants from "./FavoriteRestaurants";
+import NewRecipeSearch from "./NewRecipeSearch";
 const reviewsData = "http://localhost:3001/api/reviews";
 
 function App() {
@@ -74,7 +75,9 @@ function App() {
         <Route exact path="/reviews/favorite">
           <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants} />
         </Route>
-
+        <Route exact path="/recipes/search">
+          <NewRecipeSearch />
+        </Route>
         <Route exact path="/">
           <SearchAndFilter
             handleUpdateCategory={handleUpdateCategory}

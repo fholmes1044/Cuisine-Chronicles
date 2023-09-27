@@ -46,6 +46,16 @@ function NavBar() {
         NewReviewForm
       </NavLink>
       <NavLink
+        to="/recipes/search"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Find Recipes
+      </NavLink>
+      <NavLink
         to="/reviews/favorite"
         exact
         style={linkStyles}
