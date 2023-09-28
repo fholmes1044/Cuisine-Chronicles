@@ -14,9 +14,7 @@ function NewRecipeSearch() {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("data", data)
         setRecipes(data.hits);
-        console.log(recipes)
       } else {
         console.error("Error fetching recipes");
       }

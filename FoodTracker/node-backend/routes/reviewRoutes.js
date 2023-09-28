@@ -14,7 +14,7 @@ router.post('/reviews', (req, res) => {
   });
 
 router.delete('/reviews/:id', (req, res) => {
-    const reviewId = parseInt(req.params.id); // 
+    const reviewId = parseInt(req.params.id); 
     const index = data.reviews.findIndex((review) => review.id === reviewId);
 
   if (index !== -1) {
