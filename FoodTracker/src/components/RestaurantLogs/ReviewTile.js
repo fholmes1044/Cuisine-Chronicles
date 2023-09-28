@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "../index.css"
+// import "../index.css"
 
 function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestaurantToFavorites}){
-    const {restaurant, address, category, feedback, image, id, recommend} = review
+    const {restaurant, address, category, feedback, image, id, recommend, total} = review
     const [recommendStatus, setRecommendStatus] = useState(recommend)
   
     function handleDeleteClick(){
@@ -40,6 +40,7 @@ function ReviewTile({review, handleDeletedReview, handleUpdatedReview, addRestau
                 <p>Feedback : {feedback} </p>
                 <p>Recommendation Status:    
                 <button className={recommendStatus ? "recommend-btn" : "doNotRecommend-btn"} onClick={handleRecommendClick}> {recommendStatus ? <strong>Recommend</strong>: <strong> Do Not Recommend</strong>}</button>
+                <p>Meal Total: ${total} </p>
                 </p>
                 <button className="favorites-btn" onClick={() =>{
                     addRestaurantToFavorites(review)

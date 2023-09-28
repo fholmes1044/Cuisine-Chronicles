@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import ReviewsDisplay from "./ReviewsDisplay";
+import ReviewsDisplay from "./RestaurantLogs/ReviewsDisplay";
 import SearchAndFilter from "./SearchAndFilter";
-import NewReviewForm from "./NewReviewForm";
+import NewReviewForm from "./RestaurantLogs/NewReviewForm";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import FavoriteRestaurants from "./FavoriteRestaurants";

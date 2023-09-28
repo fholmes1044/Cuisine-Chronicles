@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 
-function NewReviewForm({reviewsData, allReviews, setAllReviews}){
+function NewReviewForm({allReviews, setAllReviews}){
 const [newReviewData, setNewReviewData] = useState({
     restaurant: "",
     address: "",
     category: "",
     feedback:"",
     image:"",
-    recommend: true
+    recommend: true, 
+    total: 0
 });
 
 const apiUrl = 'http://localhost:3001/api/reviews'; 
@@ -37,7 +38,8 @@ function handleSubmit(e){
         category: "",
         feedback:"",
         image:"" , 
-        recommend: true
+        recommend: true,
+        total: 0
     })
 setAllReviews([...allReviews, newReview])
 })
@@ -54,6 +56,7 @@ alert ( "Your review has been added! View the Reviews Tab.");
         <input type="text" name= "category" placeholder="Category" onChange={handleReviewInput}/>
         <input type="text" name= "feedback" placeholder="Feedback" onChange={handleReviewInput}/>
         <input type="text" name= "image" placeholder="Image" onChange={handleReviewInput}/>
+        <input type="number" name= "total" placeholder="Meal Total" onChange={handleReviewInput}/>
         <input type="submit"  name="submit"  value="Add New Review"  className="submit"/>  
     </form>
     <img id = "new-review-img" src="https://i.imgur.com/Zzjpu0j.png"/>

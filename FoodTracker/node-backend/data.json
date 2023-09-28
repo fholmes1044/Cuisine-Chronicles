@@ -7,7 +7,8 @@
         "category": "breakfast",
         "feedback": "Perfect all day breakfast spot",
         "image": "https://i.imgur.com/6GQwRMW.jpg",
-        "recommend": true
+        "recommend": true,
+        "total": 25
       },
       {
         "id": 2,
@@ -16,7 +17,8 @@
         "category": "lunch",
         "feedback": "Great restaurant on the waterfront!",
         "image": "https://i.imgur.com/AfuluNS.jpg",
-        "recommend": true
+        "recommend": true,
+        "total": 48
       },
       {
         "id": 3,
@@ -25,7 +27,8 @@
         "category": "dessert",
         "feedback": "Beautiful , delicious, black owned restaurant",
         "image": "https://i.imgur.com/3UW2o7u.jpg",
-        "recommend": true
+        "recommend": true,
+        "total": 57
       },
       {
         "restaurant": "Carolina Kitchen ",
@@ -34,7 +37,8 @@
         "feedback": "Live music and well seasoned food! ",
         "image": "https://i.imgur.com/0CyQ3rK.jpg",
         "recommend": true,
-        "id": 6
+        "id": 6,
+        "total": 45
       },
       {
         "restaurant": "Dlena ",
@@ -43,7 +47,8 @@
         "feedback": "The empanadas are tasty. ",
         "image": "https://i.imgur.com/DTIYgFp.jpg",
         "recommend": true,
-        "id": 7
+        "id": 7,
+        "total": 68
       },
       {
         "restaurant": "Miss Toya's Creole House",
@@ -52,7 +57,8 @@
         "feedback": "The salad was okay. ",
         "image": "https://i.imgur.com/aE4l7cx.jpg",
         "recommend": false,
-        "id": 8
+        "id": 8,
+        "total": 55
       },
       {
         "restaurant": "Lime and Salt",
@@ -61,7 +67,8 @@
         "feedback": "The delicious churros taste like donuts!",
         "image": "https://i.imgur.com/eWqtWna.jpg",
         "recommend": true,
-        "id": 9
+        "id": 9,
+        "total": 37
       },
       {
         "restaurant": "Iron Rooster",
@@ -70,7 +77,8 @@
         "feedback": "Absolutely tasty breakfast foods. ",
         "image": "https://i.imgur.com/taWpO4O.jpg",
         "recommend": true,
-        "id": 10
+        "id": 10,
+        "total": 25
       },
       {
         "restaurant": "Xenia Greek Kouzina",
@@ -79,7 +87,8 @@
         "feedback": "They have the best crabcakes around. ",
         "image": "https://i.imgur.com/GEQiAlR.jpg",
         "recommend": false,
-        "id": 11
+        "id": 11,
+        "total": 67
       }
     ]
   }

@@ -1,6 +1,7 @@
 import React from "react";
+// import "../index.css"
 import ReviewTile from "./ReviewTile";
-import "../index.css"
+
 
 
 function ReviewsDisplay({allFilterResults, allReviews, setAllReviews, favoriteRestaurants, setFavoriteRestaurants}){
