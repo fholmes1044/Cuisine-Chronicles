@@ -25,7 +25,7 @@ code {
 }
 
 #navbar{
-  background-color: rgb(247, 240, 230);
+  background-color: rgb(252, 232, 207);
  margin: 0%;
  width: 100%;
  text-align: center;
@@ -126,6 +126,7 @@ border-radius: 12px;
   padding: 20px;
   margin-left: 50px;
   border-radius: 60%;
+  width:400px
 }
 
 #restaurant-heading{

@@ -35,8 +35,8 @@ function NewRecipeSearch() {
   }, [searchQuery]);
 
   return (
-    <div>
-      <h1>Find Recipes</h1>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <img src="https://i.imgur.com/F1ZpZVS.png"/>
       <input
         type="text"
         placeholder="Search for recipes"

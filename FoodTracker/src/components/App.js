@@ -6,6 +6,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import FavoriteRestaurants from "./FavoriteRestaurants";
 import NewRecipeSearch from "./NewRecipeSearch";
+import CategoryBarGraph from "./CategoryBarGraph";
 const reviewsData = "http://localhost:3001/api/reviews";
 
 function App() {
@@ -64,7 +65,9 @@ function App() {
             setAllReviews={setAllReviews}
           />
         </Route>
-
+        <Route exact path="/reviews/bargraph">
+          <CategoryBarGraph allReviews={allReviews}/>
+        </Route>
         <Route exact path="/reviews/favorite">
           <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants} />
         </Route>

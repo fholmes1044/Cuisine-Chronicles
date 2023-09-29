@@ -35,6 +35,16 @@ function NavBar() {
       >
         Reviews
       </NavLink>
+      <NavLink
+        to="/reviews/bargraph"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Food Tracking Data
+      </NavLink>
       
       <NavLink
         to="/recipes/search"
