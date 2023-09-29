@@ -5,6 +5,7 @@ function CategoryBarGraph({ allReviews }) {
   const chartContainerRef = useRef(null);
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
+  let costTotal = 0;
 
   useEffect(() => {
     if (chartRef.current) {
@@ -54,11 +55,23 @@ function CategoryBarGraph({ allReviews }) {
     }
   }, [allReviews]);
 
+for( let i=0; i<allReviews.length; i++ ){
+    costTotal += allReviews[i].total
+}
+
   return (
-    <div>
+    <div style={{ display: "flex" }}>
+        <div style={{ flex: 1 }}>
       <h2>Your Food Category Breakdown</h2>
       <div ref={chartContainerRef} style={{ width: "800px", height: "600px" }}>
         <canvas ref={chartRef} />
+      </div>
+      </div>
+      <div style={{ flex: 1, marginTop: "220px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+          <div style={{ fontSize: "24px", fontWeight: "bold" }}>Total Food Spending:</div>
+          <div style={{ fontSize: "36px", fontWeight: "bold" }}>${costTotal}</div>
+        </div>
       </div>
     </div>
   );
