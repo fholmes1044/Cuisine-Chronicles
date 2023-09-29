@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import ReviewsDisplay from "./RestaurantLogs/ReviewsDisplay";
 import SearchAndFilter from "./SearchAndFilter";
-import NewReviewForm from "./RestaurantLogs/NewReviewForm";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import FavoriteRestaurants from "./FavoriteRestaurants";
@@ -22,6 +21,8 @@ function App() {
         setAllReviews(reviews);
       });
   }, []);
+
+  console.log("ar", allReviews)
 
   const allFilterResults = allReviews.filter((result) => {
     if (searchDisplay === "" && categoryResults === "Select An Option")
@@ -46,14 +47,6 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/reviews/new">
-          <NewReviewForm
-            reviewsData={reviewsData}
-            allReviews={allReviews}
-            setAllReviews={setAllReviews}
-          />
-        </Route>
-
         <Route exact path="/reviews">
           <SearchAndFilter
             handleUpdateCategory={handleUpdateCategory}

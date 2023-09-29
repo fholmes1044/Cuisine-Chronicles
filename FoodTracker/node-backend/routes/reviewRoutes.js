@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const data = require('../data.json');
+const { v4: uuidv4 } = require('uuid');
 
 router.get('/reviews', (req, res) => {
   const reviews = require('../data.json').reviews;
@@ -9,12 +10,14 @@ router.get('/reviews', (req, res) => {
 
 router.post('/reviews', (req, res) => {
     const newReview = req.body;
+    newReview.id = uuidv4();
     data.reviews.push(newReview);
     res.json(newReview);
+    
   });
 
 router.delete('/reviews/:id', (req, res) => {
-    const reviewId = parseInt(req.params.id); 
+    const reviewId = req.params.id; 
     const index = data.reviews.findIndex((review) => review.id === reviewId);
 
   if (index !== -1) {
