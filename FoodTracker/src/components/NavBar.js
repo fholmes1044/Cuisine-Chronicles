@@ -24,7 +24,7 @@ function NavBar() {
       >
         Home
       </NavLink>
-     
+
       <NavLink
         to="/reviews"
         exact
@@ -36,6 +36,16 @@ function NavBar() {
         Reviews
       </NavLink>
       <NavLink
+        to="/reviews/favorite"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        FavoriteRestaurants
+      </NavLink>
+      <NavLink
         to="/reviews/bargraph"
         exact
         style={linkStyles}
@@ -45,7 +55,7 @@ function NavBar() {
       >
         Food Tracking Data
       </NavLink>
-      
+
       <NavLink
         to="/recipes/search"
         exact
@@ -56,17 +66,6 @@ function NavBar() {
       >
         Find Recipes
       </NavLink>
-      <NavLink
-        to="/reviews/favorite"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
-      >
-        FavoriteRestaurants
-      </NavLink>
-      
     </div>
   );
 }

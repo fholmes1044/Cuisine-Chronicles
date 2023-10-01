@@ -23,8 +23,6 @@ function App() {
       });
   }, []);
 
-  console.log("ar", allReviews)
-
   const allFilterResults = allReviews.filter((result) => {
     if (searchDisplay === "" && categoryResults === "Select An Option")
       return true;
@@ -66,7 +64,7 @@ function App() {
           />
         </Route>
         <Route exact path="/reviews/bargraph">
-          <CategoryBarGraph allReviews={allReviews}/>
+          <CategoryBarGraph allReviews={allReviews} />
         </Route>
         <Route exact path="/reviews/favorite">
           <FavoriteRestaurants favoriteRestaurants={favoriteRestaurants} />

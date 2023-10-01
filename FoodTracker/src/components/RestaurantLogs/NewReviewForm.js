@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function NewReviewForm({ allReviews, setAllReviews }) {
-    
   const [newReviewData, setNewReviewData] = useState({
     restaurant: "",
     address: "",
@@ -19,12 +18,11 @@ function NewReviewForm({ allReviews, setAllReviews }) {
       ...newReviewData,
       [e.target.name]: e.target.value,
     });
-    console.log(e.target.name, e.target.value)
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("submitted")
+    console.log("submitted");
     fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -34,7 +32,6 @@ function NewReviewForm({ allReviews, setAllReviews }) {
     })
       .then((resp) => resp.json())
       .then((newReview) => {
-        console.log("NR", newReview)
         setNewReviewData({
           restaurant: "",
           address: "",
@@ -61,14 +58,20 @@ function NewReviewForm({ allReviews, setAllReviews }) {
           name="restaurant"
           placeholder="Restaurant Name"
           onChange={handleReviewInput}
+          style={{ marginRight: "5px" }}
         />
         <input
           type="text"
           name="address"
           placeholder="Address"
           onChange={handleReviewInput}
+          style={{ marginRight: "10px" }}
         />
-        <select name="category" onChange={handleReviewInput}>
+        <select
+          name="category"
+          onChange={handleReviewInput}
+          style={{ marginRight: "5px" }}
+        >
           <option value=""> Select A Food Category</option>
           <option value="Breakfast">Breakfast</option>
           <option value="Lunch">Lunch</option>
@@ -80,18 +83,21 @@ function NewReviewForm({ allReviews, setAllReviews }) {
           name="feedback"
           placeholder="Feedback"
           onChange={handleReviewInput}
+          style={{ marginRight: "5px" }}
         />
         <input
           type="text"
           name="image"
           placeholder="Image"
           onChange={handleReviewInput}
+          style={{ marginRight: "5px" }}
         />
         <input
           type="number"
           name="total"
           placeholder="Meal Total"
           onChange={handleReviewInput}
+          style={{ marginRight: "5px" }}
         />
         <input
           type="submit"

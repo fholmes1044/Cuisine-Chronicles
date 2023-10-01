@@ -55,22 +55,36 @@ function CategoryBarGraph({ allReviews }) {
     }
   }, [allReviews]);
 
-for( let i=0; i<allReviews.length; i++ ){
-    costTotal += allReviews[i].total
-}
+  for (let i = 0; i < allReviews.length; i++) {
+    costTotal += parseInt(allReviews[i].total);
+  }
 
   return (
     <div style={{ display: "flex" }}>
-        <div style={{ flex: 1 }}>
-      <h2>Your Food Category Breakdown</h2>
-      <div ref={chartContainerRef} style={{ width: "800px", height: "600px" }}>
-        <canvas ref={chartRef} />
-      </div>
+      <div style={{ flex: 1 }}>
+        <h2>Your Food Category Breakdown</h2>
+        <div
+          ref={chartContainerRef}
+          style={{ width: "800px", height: "600px" }}
+        >
+          <canvas ref={chartRef} />
+        </div>
       </div>
       <div style={{ flex: 1, marginTop: "220px" }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-          <div style={{ fontSize: "24px", fontWeight: "bold" }}>Total Food Spending:</div>
-          <div style={{ fontSize: "36px", fontWeight: "bold" }}>${costTotal}</div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <div style={{ fontSize: "24px", fontWeight: "bold" }}>
+            Total Food Spending:
+          </div>
+          <div style={{ fontSize: "36px", fontWeight: "bold" }}>
+            ${costTotal}
+          </div>
         </div>
       </div>
     </div>

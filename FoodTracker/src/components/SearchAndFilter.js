@@ -1,19 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-function SearchAndFilter({setSearchDisplay, handleUpdateCategory}){
-const [searchValue, setSearchValue] = useState("")
+function SearchAndFilter({ setSearchDisplay, handleUpdateCategory }) {
+  const [searchValue, setSearchValue] = useState("");
 
-function handleSubmit(e){
-    e.preventDefault()
-    setSearchDisplay(searchValue)  
-    setSearchValue("")
-    alert("You can now view your searched restaurant") 
-}
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSearchDisplay(searchValue);
+    setSearchValue("");
+  }
 
-    return(
-      <div>
-        
-        <form className="searchbar" onSubmit={handleSubmit}>
+  return (
+    <div>
+      <form className="searchbar" onSubmit={handleSubmit}>
         <strong>Find a Restaurant: </strong>
         <input
           type="text"
@@ -21,7 +19,7 @@ function handleSubmit(e){
           placeholder="search restaurants"
           value={searchValue}
           onChange={(e) => {
-            setSearchValue(e.target.value)
+            setSearchValue(e.target.value);
           }}
         />
         <button type="submit">🔍</button>
@@ -29,20 +27,20 @@ function handleSubmit(e){
 
       <label>
         <strong>Select Food Category: </strong>
-        <select onChange={(e) => {
-            handleUpdateCategory(e.target.value)
-            
-        }}>
-          <option value="Select An Option" >Select An Option</option>
-          <option value="breakfast" >breakfast</option>
-          <option value="lunch" >lunch</option>
-          <option value="dinner" >dinner</option>
+        <select
+          onChange={(e) => {
+            handleUpdateCategory(e.target.value);
+          }}
+        >
+          <option value="Select An Option">Select An Option</option>
+          <option value="breakfast">breakfast</option>
+          <option value="lunch">lunch</option>
+          <option value="dinner">dinner</option>
           <option value="dessert"> dessert</option>
         </select>
       </label>
-      
-      </div>
-    )
+    </div>
+  );
 }
 
-export default SearchAndFilter
+export default SearchAndFilter;

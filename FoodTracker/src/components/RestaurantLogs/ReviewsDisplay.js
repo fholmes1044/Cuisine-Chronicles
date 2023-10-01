@@ -1,5 +1,4 @@
 import React from "react";
-// import "../index.css"
 import ReviewTile from "./ReviewTile";
 import NewReviewForm from "./NewReviewForm";
 
@@ -44,7 +43,7 @@ function ReviewsDisplay({
 
   return (
     <div>
-      <NewReviewForm setAllReviews={setAllReviews}  allReviews={allReviews}/>
+      <NewReviewForm setAllReviews={setAllReviews} allReviews={allReviews} />
       <h1 className="all-reviews"> Your Restaurant Experiences</h1>
       <div className="row">{reviewsMap}</div>
     </div>
