@@ -10,7 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Technologies Used 
 * React 
-* Fluent UI
 * JS
 * Node
 * JSX
